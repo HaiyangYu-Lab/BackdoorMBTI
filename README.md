@@ -17,62 +17,64 @@ The experiments (the results will be updated once the experiment finished):
    - The performance exploration under different **noise level**
 
 ## Citation
-If our work is userful for your research, please cite our paper as follows:
+If our work is useful for your research, please cite our related backdoor papers as follows:
 ```
 @inproceedings{yu2025backdoormbti,
   title={BackdoorMBTI: A Backdoor Learning Multimodal Benchmark Tool Kit for Backdoor Defense Evaluation},
   author={Yu, Haiyang and Xie, Tian and Gui, Jiaping and Wang, Pengyang and Cheng, Pengzhou and Yi, Ping and Wu, Yue},
-  booktitle={Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V. 1},
+  booktitle={Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.1},
   pages={2791--2802},
+  year={2025},
+  publisher={ACM},
+  doi={10.1145/3690624.3709385}
+}
+
+@article{yu2025sequential,
+  title={Sequential Feature-Based Backdoor Detection in Deep Neural Networks Via Few-Shot Learning},
+  author={Yu, Haiyang and Hong, Fan and Xie, Tian and Yi, Ping and Zou, Futai and Wu, Yue},
+  journal={IEEE Internet of Things Journal},
   year={2025}
+}
+
+@inproceedings{yu2026graph,
+  title={Backdoor Defense via Graph-Structured Reinforcement Learning for Targeted Neuron Pruning},
+  author={Yu, Haiyang and Li, Nan and Jiang, Haoyu and Yi, Ping and Wu, Yue},
+  booktitle={IEEE International Conference on Multimedia and Expo (ICME)},
+  year={2026}
+}
+
+@inproceedings{xie2026bmprune,
+  title={BMPrune: Bidirectional Magnitude-Based Backdoor Pruning with Clean Preservation and Malicious Penalization},
+  author={Xie, Tian and Li, Nan and Yu, Haiyang and Jiang, Haoyu and Yi, Ping and Wu, Yue},
+  booktitle={IEEE International Conference on Communications: Communication \& Information System Security (ICC)},
+  year={2026}
+}
+
+@inproceedings{tun2025ocage,
+  title={OCAGE: An Input-Level One-Class Backdoor Detection Method Using Feature Map Extraction for DNN},
+  author={Tun, Han Lin and Yu, Haiyang and Xie, Tian and Yi, Ping},
+  booktitle={2025 International Joint Conference on Neural Networks (IJCNN)},
+  pages={1--8},
+  year={2025},
+  publisher={IEEE},
+  doi={10.1109/IJCNN64981.2025.11227936}
+}
+
+@inproceedings{jiang2024ocgec,
+  title={OCGEC: One-Class Graph Embedding Classification for DNN Backdoor Detection},
+  author={Jiang, Haoyu and Yu, Haiyang and Li, Nan and Yi, Ping},
+  booktitle={2024 International Joint Conference on Neural Networks (IJCNN)},
+  pages={1--8},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/IJCNN60899.2024.10650468}
 }
 ```
 
 
-## Updates 
+## Changelog
 
-### 2026-03-18
-1. Add resume function for batch_train script.
-
-### 2026-03-12
-1. Update the poison generation script in `resources/bite`.
-2. Add `REAMD.md` file for bite data preparation.
-3. Fix bug in preprocessing for model LSTM.
-4. Add multi-GPU serial training bash in `backdoormbti/batch_train`.
-5. Fix bug in `atk_batch_train.py`.
-
-### 2025-08-17
-
-1. Update the batch_train scripts.
-2. Fix bug in `README.md`, update the citation.
-
-### 2025-06-30
-
-1. Update the docs.
-2. Fix bug of args name in atk_train.
-3. Update the link in `README.md`.
-4. Format using black.
-
-### 2024-12-11
-We are actively developing BackdoorMBTI with exciting new features recently added:
-
-1. **Tasks/Modalities**: we have added 2 new type of tasks (video and contrasive learning), we are trying to support VQA task and fix the bug in R3D learning.
-
-2. **Models**: we are now support 22 models in total (including ViT, RoBERTa, GPT2, X-Vector, HuBERT, R3D).
-
-3. **New Attacks:** we are adding 19 attacks (9 image, 1 text, 1 audio, 4 video, 1 audiovisual, 1 contrasive learning, 2 visual question answering), see section [attacks](https://backdoormbti.readthedocs.io/en/latest/tutorials/attacks.html) for detail.
-
-4. **New Defenses:** we have added 2 backdoor defense method (MNTD and FreeEagle), see section [defenses](https://backdoormbti.readthedocs.io/en/latest/tutorials/defenses.html) for detail.
-
-5. **Documentation**: we have set up our documentation pages at [https://backdoormbti.readthedocs.io/](https://backdoormbti.readthedocs.io/).
-
-6. **PyPI Package**: we have packaged BackdoorMBTI as a PyPI package for easier installation and integration.
-
-7. **Results**: we are running serveral experiments, new results will be updated at [results.md](./backdoormbti/resources/results.md)
-
-8. **CI Pipeline**: we have added CI pipeline for premerge test.
-
-9. **Test Cases**: we have added first test case for BadNets.
+See [CHANGELOG.md](./CHANGELOG.md) for release notes and updates.
 
 ## Future Work
 
