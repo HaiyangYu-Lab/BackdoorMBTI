@@ -10,7 +10,7 @@ CONTINUE_ON_FAIL=true  # true to keep going after a failure
 
 # Parallel settings
 # Example: 3 free GPUs -> set GPUS=(0 1 2) or (1 2 3) based on your machine.
-GPUS=(3)
+GPUS=(1 2)
 
 mkdir -p "$LOG_DIR"
 
@@ -19,12 +19,12 @@ THIS_FILE=$(basename "$0")
 # Command list; each entry can set its own GPU
 CMDS=(
 	# your commands
-	"python atk_batch_train.py --data_type audio --dataset speechcommands --attack_name badnet     --model_name lstm --pratio 0.1 --num_workers 4 --epochs 100 --batch_size 256 --batch_size 256 --train_benign"
+	# "python atk_batch_train.py --data_type audio --dataset speechcommands --attack_name badnet     --model_name lstm --pratio 0.1 --num_workers 4 --epochs 100 --batch_size 256 --batch_size 256 --train_benign"
   "python atk_batch_train.py --data_type audio --dataset speechcommands --attack_name ultrasonic --model_name lstm --pratio 0.1 --num_workers 4 --epochs 100 --batch_size 256"
   "python atk_batch_train.py --data_type audio --dataset speechcommands --attack_name daba       --model_name lstm --pratio 0.1 --num_workers 4 --epochs 100 --batch_size 256"
-  "python atk_batch_train.py --data_type audio --dataset speechcommands --attack_name gis        --model_name lstm --pratio 0.1 --num_workers 4 --epochs 100 --batch_size 256"
-  "python atk_batch_train.py --data_type audio --dataset speechcommands --attack_name badnet     --model_name lstm --pratio 0.1 --num_workers 4 --epochs 100 --batch_size 256"
-  "python atk_batch_train.py --data_type audio --dataset speechcommands --attack_name blend      --model_name lstm --pratio 0.1 --num_workers 4 --epochs 100 --batch_size 256"
+  # "python atk_batch_train.py --data_type audio --dataset speechcommands --attack_name gis        --model_name lstm --pratio 0.1 --num_workers 4 --epochs 100 --batch_size 256"
+  # "python atk_batch_train.py --data_type audio --dataset speechcommands --attack_name badnet     --model_name lstm --pratio 0.1 --num_workers 4 --epochs 100 --batch_size 256"
+  # "python atk_batch_train.py --data_type audio --dataset speechcommands --attack_name blend      --model_name lstm --pratio 0.1 --num_workers 4 --epochs 100 --batch_size 256"
 )
 
 # Activate conda env
